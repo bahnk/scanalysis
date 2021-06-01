@@ -1,0 +1,190 @@
+{
+   "samples": [
+		{
+			"project": "SC20207",
+         "name": "BUS1601A1",
+         "species": "Mus musculus",
+         "condition": "Silica beads",
+         "color": "#00BFC4",
+
+			"create_seurat_object": {
+
+				"Seurat::Read10X": {
+					"data.dir": "/camp/stp/babs/working/bahn/projects/gutierrezm/claudio.bussi/033_scrnaseq_airspace_cells_inflammation/results/cellranger/BUS1601A1/outs/filtered_feature_bc_matrix"
+				},
+
+				"Seurat::CreateSeuratObject": {
+					"project": "BUS1601A1"
+				},
+
+				"columns": {
+					"condition": "Silica beads",
+					"sample": "BUS1601A1"
+				},
+
+				"attributes": {
+					"project": "SC20207",
+					"condition": "Silica beads",
+					"sample": "BUS1601A1"
+				}
+			},
+
+			"percentage_of_mitochondria": {
+				"column_name": "percent.mt",
+				"Seurat::PercentageFeatureSet": {
+					"pattern": "mt-"
+				}
+			},
+
+			"filtering": {
+   		   "n_feature_rna_min": "500",
+   		   "n_feature_rna_max": "Inf",
+   		   "percent_mt_min": "-Inf",
+   		   "percent_mt_max": "Inf"
+   		},
+
+   		"normalizing": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				},
+				"Seurat::NormalizeData": {
+					"normalization.method": "LogNormalize"
+				}
+   		},
+
+   		"find_variable_features": {
+				"Seurat::FindVariableFeatures": {
+					"selection_method": "vst",
+   		   	"nfeatures": "2000"
+				}
+   		},
+
+   		"scaling": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				}
+   		},
+
+			"cell_cycle_scoring": {
+			},
+
+			"cell_cycle_regression": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				}
+			},
+
+			"cell_cycle_difference_regression": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				}
+			},
+
+			"cell_cycle_pca": {
+			},
+
+   		"pca": {
+				"Seurat::RunPCA": {
+					"npcs": "20"
+				}
+   		},
+
+   		"jackstraw": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				},
+				"Seurat::JackStraw": {
+					"num.replicate": "100",
+					"dims": "20"
+				},
+				"Seurat::ScoreJackStraw": {
+					"dims": "1:20"
+				}
+   		},
+
+   		"clustering": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				},
+				"Seurat::FindNeighbors": {
+					"reduction": "pca",
+					"k.param": "20",
+					"dims": "1:20"
+				},
+				"Seurat::FindClusters": {
+					"resolution": ".8"
+				}
+   		},
+
+   		"umap": {
+				"Seurat::RunUMAP": {
+					"assay": "RNA",
+					"umap.method": "uwot",
+					"reduction": "pca",
+					"dims": "1:20",
+					"n.neighbors": "30L",
+					"n.components": "2L",
+					"metric": "cosine",
+					"min.dist": ".3",
+					"spread": "1"
+				}
+   		},
+
+   		"find_all_markers": {
+				"Parallelization": {
+					"globals_maxsize": "3000 * 1024^2",
+					"workers": "24"
+				},
+				"Seurat::FindAllMarkers": {
+					"logfc.threshold": ".25",
+					"min.pct": ".25",
+					"only.pos": "T"
+				}
+			},
+
+   		"integration_sctransform": {
+   		   "nfeatures": "2000"
+   		}
+
+		},
+
+		{
+         "project": "SC20207",
+         "name": "BUS1601A2",
+         "species": "Mus musculus",
+         "condition": "Silica crystals",
+         "color": "#F8766D",
+
+			"create_seurat_object": {
+				"Seurat::Read10X": {
+					"data.dir": "/camp/stp/babs/working/bahn/projects/gutierrezm/claudio.bussi/033_scrnaseq_airspace_cells_inflammation/results/cellranger/BUS1601A2/outs/filtered_feature_bc_matrix"
+				},
+				"Seurat::CreateSeuratObject": {
+					"project": "BUS1601A2"
+				},
+				"columns": {
+					"condition": "Silica crystals",
+					"sample": "BUS1601A2"
+				},
+				"attributes": {
+					"project": "SC20207",
+					"condition": "Silica crystals",
+					"sample": "BUS1601A2"
+				}
+			},
+
+			"percentage_of_mitochondria": {
+				"column_name": "percent.mt",
+				"Seurat::PercentageFeatureSet": {
+					"pattern": "mt-"
+				}
+			}
+		}
+	]
+}

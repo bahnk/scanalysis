@@ -1,0 +1,9 @@
+{
+	"Seurat::PrepSCTIntegration": {
+		"object.list": "",
+		"assay": "NULL",
+		"anchor.features": "2000",
+		"sct.clip.range": "NULL",
+		"verbose": "TRUE"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"Seurat::VariableFeaturePlot": {
+		"object": "",
+		"cols": "c("black", "red")",
+		"pt.size": "1",
+		"log": "NULL",
+		"selection.method": "NULL",
+		"assay": "NULL",
+		"raster": "NULL"
+	}
+}

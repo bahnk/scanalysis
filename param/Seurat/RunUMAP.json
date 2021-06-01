@@ -1,0 +1,28 @@
+{
+	"Seurat::RunUMAP": {
+		"object": "",
+		"reduction.key": "UMAP_",
+		"assay": "NULL",
+		"reduction.model": "NULL",
+		"return.model": "FALSE",
+		"umap.method": "uwot",
+		"n.neighbors": "30",
+		"n.components": "2",
+		"metric": "cosine",
+		"n.epochs": "NULL",
+		"learning.rate": "1",
+		"min.dist": "0.3",
+		"spread": "1",
+		"set.op.mix.ratio": "1",
+		"local.connectivity": "1",
+		"repulsion.strength": "1",
+		"negative.sample.rate": "5",
+		"a": "NULL",
+		"b": "NULL",
+		"uwot.sgd": "FALSE",
+		"seed.use": "42",
+		"metric.kwds": "NULL",
+		"angular.rp.forest": "FALSE",
+		"verbose": "TRUE"
+	}
+}

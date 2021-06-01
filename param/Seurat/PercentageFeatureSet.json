@@ -1,0 +1,9 @@
+{
+	"Seurat::PercentageFeatureSet": {
+		"object": "",
+		"pattern": "NULL",
+		"features": "NULL",
+		"col.name": "NULL",
+		"assay": "NULL"
+	}
+}

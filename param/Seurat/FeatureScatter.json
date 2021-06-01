@@ -1,0 +1,18 @@
+{
+	"Seurat::FeatureScatter": {
+		"object": "",
+		"feature1": "",
+		"feature2": "",
+		"cells": "NULL",
+		"group.by": "NULL",
+		"cols": "NULL",
+		"pt.size": "1",
+		"shape.by": "NULL",
+		"span": "NULL",
+		"smooth": "FALSE",
+		"combine": "TRUE",
+		"slot": "data",
+		"plot.cor": "TRUE",
+		"raster": "NULL"
+	}
+}

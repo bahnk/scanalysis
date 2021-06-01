@@ -1,0 +1,8 @@
+{
+	"Seurat::RenameCells": {
+		"object": "",
+		"add.cell.id": "NULL",
+		"new.names": "NULL",
+		"for.merge": "FALSE"
+	}
+}

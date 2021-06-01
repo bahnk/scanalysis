@@ -1,0 +1,7 @@
+{
+	"Seurat::ScoreJackStraw": {
+		"object": "",
+		"dims": "1:5",
+		"score.thresh": "1e-05"
+	}
+}

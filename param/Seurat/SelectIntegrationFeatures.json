@@ -1,0 +1,9 @@
+{
+	"Seurat::SelectIntegrationFeatures": {
+		"object.list": "",
+		"nfeatures": "2000",
+		"assay": "NULL",
+		"verbose": "TRUE",
+		"fvf.nfeatures": "2000"
+	}
+}

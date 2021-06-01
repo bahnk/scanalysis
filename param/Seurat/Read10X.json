@@ -1,0 +1,9 @@
+{
+	"Seurat::Read10X": {
+		"data.dir": "NULL",
+		"gene.column": "2",
+		"cell.column": "1",
+		"unique.features": "TRUE",
+		"strip.suffix": "FALSE"
+	}
+}

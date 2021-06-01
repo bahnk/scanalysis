@@ -1,0 +1,29 @@
+{{ block "Seurat::RunUMAP" . }}
+{{ .OUTPUT }} <-
+{{ "\t" }}Seurat::RunUMAP(
+{{- if .Object }}{{ "\n\t\t" }}object={{ .Object }}{{ if or .Reduction_key .Assay .Reduction_model .Return_model .Umap_method .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Reduction_key }}{{ "\n\t\t" }}reduction.key="{{ .Reduction_key }}"{{ if or .Assay .Reduction_model .Return_model .Umap_method .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Assay }}{{ "\n\t\t" }}assay={{ .Assay }}{{ if or .Reduction_model .Return_model .Umap_method .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Reduction_model }}{{ "\n\t\t" }}reduction.model={{ .Reduction_model }}{{ if or .Return_model .Umap_method .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Return_model }}{{ "\n\t\t" }}return.model={{ .Return_model }}{{ if or .Umap_method .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Umap_method }}{{ "\n\t\t" }}umap.method="{{ .Umap_method }}"{{ if or .N_neighbors .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .N_neighbors }}{{ "\n\t\t" }}n.neighbors={{ .N_neighbors }}{{ if or .N_components .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .N_components }}{{ "\n\t\t" }}n.components={{ .N_components }}{{ if or .Metric .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Metric }}{{ "\n\t\t" }}metric="{{ .Metric }}"{{ if or .N_epochs .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .N_epochs }}{{ "\n\t\t" }}n.epochs={{ .N_epochs }}{{ if or .Learning_rate .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Learning_rate }}{{ "\n\t\t" }}learning.rate={{ .Learning_rate }}{{ if or .Min_dist .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Min_dist }}{{ "\n\t\t" }}min.dist={{ .Min_dist }}{{ if or .Spread .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Spread }}{{ "\n\t\t" }}spread={{ .Spread }}{{ if or .Set_op_mix_ratio .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Set_op_mix_ratio }}{{ "\n\t\t" }}set.op.mix.ratio={{ .Set_op_mix_ratio }}{{ if or .Local_connectivity .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Local_connectivity }}{{ "\n\t\t" }}local.connectivity={{ .Local_connectivity }}{{ if or .Repulsion_strength .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Repulsion_strength }}{{ "\n\t\t" }}repulsion.strength={{ .Repulsion_strength }}{{ if or .Negative_sample_rate .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Negative_sample_rate }}{{ "\n\t\t" }}negative.sample.rate={{ .Negative_sample_rate }}{{ if or .A .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .A }}{{ "\n\t\t" }}a={{ .A }}{{ if or .B .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .B }}{{ "\n\t\t" }}b={{ .B }}{{ if or .Uwot_sgd .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Uwot_sgd }}{{ "\n\t\t" }}uwot.sgd={{ .Uwot_sgd }}{{ if or .Seed_use .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Seed_use }}{{ "\n\t\t" }}seed.use={{ .Seed_use }}{{ if or .Metric_kwds .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Metric_kwds }}{{ "\n\t\t" }}metric.kwds={{ .Metric_kwds }}{{ if or .Angular_rp_forest .Verbose }},{{ end }}{{ end }}
+{{- if .Angular_rp_forest }}{{ "\n\t\t" }}angular.rp.forest={{ .Angular_rp_forest }}{{ if or .Verbose }},{{ end }}{{ end }}
+{{- if .Verbose }}{{ "\n\t\t" }}verbose={{ .Verbose }}{{ end }}
+	)
+{{ end }}

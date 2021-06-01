@@ -1,0 +1,9 @@
+{
+	"Seurat::CellCycleScoring": {
+		"object": "",
+		"s.features": "",
+		"g2m.features": "",
+		"ctrl": "NULL",
+		"set.ident": "FALSE"
+	}
+}

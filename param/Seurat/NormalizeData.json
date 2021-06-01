@@ -1,0 +1,9 @@
+{
+	"Seurat::NormalizeData": {
+		"object": "",
+		"normalization.method": "LogNormalize",
+		"scale.factor": "10000",
+		"margin": "1",
+		"verbose": "TRUE"
+	}
+}

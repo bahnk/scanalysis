@@ -1,0 +1,24 @@
+{
+	"Seurat::VlnPlot": {
+		"object": "",
+		"features": "",
+		"cols": "NULL",
+		"pt.size": "NULL",
+		"idents": "NULL",
+		"sort": "FALSE",
+		"assay": "NULL",
+		"group.by": "NULL",
+		"split.by": "NULL",
+		"adjust": "1",
+		"y.max": "NULL",
+		"same.y.lims": "FALSE",
+		"log": "FALSE",
+		"ncol": "NULL",
+		"slot": "data",
+		"split.plot": "FALSE",
+		"stack": "FALSE",
+		"combine": "TRUE",
+		"fill.by": "feature",
+		"flip": "FALSE"
+	}
+}

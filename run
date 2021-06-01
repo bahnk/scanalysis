@@ -1,0 +1,26 @@
+#!/bin/sh
+
+go run \
+	main.go \
+	snippet.go \
+	Report.go \
+	Seurat.go \
+	CreateSeuratObject.go \
+	PercentageOfMitochondria.go \
+	Filtering.go \
+	Normalizing.go \
+	FindVariableFeatures.go \
+	Scaling.go \
+	CellCycleScoring.go \
+	CellCycleRegression.go \
+	CellCycleDifferenceRegression.go \
+	CellCyclePca.go \
+	Integration.go \
+	IntegrationSCTransform.go \
+	PcaVariableFeatures.go \
+	JackStraw.go \
+	Clustering.go \
+	Umap.go \
+	NFeatureRNAVlnPlot.go \
+	FindAllMarkers.go
+
